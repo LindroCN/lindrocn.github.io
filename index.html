@@ -1,11 +1,10 @@
-<html>
-
-<head>
-
-</head>
-
- <body onload="parent.location='http://8.140.54.97:88' "> 
-
-</body>
-
-</html>
+<!DOCTYPE html><html><head>
+    <title>重定向示例</title>
+    <script>
+        window.onload = function() {
+            var ipAddress = "http://8.140.54.97:88";
+            window.location.href = ipAddress;
+        };
+    </script></head><body>
+    <h1>正在重定向...</h1>
+    <p>如果你看到这句话，说明浏览器正在尝试重定向你到指定的IP地址。</p></body></html>
