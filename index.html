@@ -1,10 +1,106 @@
-<!DOCTYPE html><html><head>
-    <title>重定向到站点</title>
-    <script>
-        window.onload = function() {
-            var ipAddress = "http://8.140.54.97";
-            window.location.href = ipAddress;
-        };
-    </script></head><body>
-    <h1>正在重定向...</h1>
-    <p>如果你看到这句话，说明您浏览器正在尝试重定向至网站。</p></body></html>
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>网站跳转页</title>  
+    <style>  
+        body {  
+            font-family: Arial, sans-serif;  
+            text-align: center;  
+            margin: 0;  
+            padding: 20px;  
+            background-color: #f2f2f2;  
+            display: flex;  
+            flex-direction: column;  
+            justify-content: center;  
+            align-items: center;  
+            height: 100vh;  
+            overflow: hidden;  
+        }  
+  
+        .container {  
+            display: flex;  
+            flex-direction: column;  
+            align-items: center;  
+        }  
+  
+        h1 {  
+            color: #333;  
+            margin-bottom: 20px;  
+        }  
+  
+        p {  
+            color: #666;  
+            font-size: 16px;  
+            margin: 10px 0;  
+        }  
+  
+        #countdown {  
+            font-size: 32px;  
+            color: #007BFF;  
+            margin-bottom: 20px;  
+            animation: pulse 2s infinite;  
+        }  
+  
+        @keyframes pulse {  
+            0% { transform: scale(1); }  
+            50% { transform: scale(1.1); }  
+            100% { transform: scale(1); }  
+        }  
+  
+        #skip-link {  
+            color: #007BFF;  
+            text-decoration: none;  
+            border-bottom: 2px solid #007BFF;  
+            padding-bottom: 2px;  
+            transition: all 0.3s ease;  
+        }  
+  
+        #skip-link:hover {  
+            color: #0056b3;  
+            border-bottom-color: #0056b3;  
+        }  
+    </style>  
+</head>  
+<body>  
+    <div class="container">  
+        <h1>欢迎来到我们的网站跳转页！</h1>  
+        <p>您将在<span id="countdown">5</span>秒后自动跳转到目标网站。</p>  
+        <p>如果您不想等待，请点击<a href="https://www.example.com" id="skip-link">这里</a>直接跳转。</p>  
+    </div>  
+  
+    <script>  
+        // 设置倒计时秒数  
+        var countdownSeconds = 5;  
+        var countdownElement = document.getElementById('countdown');  
+  
+        // 倒计时函数  
+        function startCountdown() {  
+            var countdownInterval = setInterval(function() {  
+                countdownSeconds--;  
+                countdownElement.textContent = countdownSeconds;  
+  
+                if (countdownSeconds <= 0) {  
+                    clearInterval(countdownInterval);  
+                    redirect();  
+                }  
+            }, 1000);  
+        }  
+  
+        // 重定向函数  
+        function redirect() {  
+            window.location.href = "https://www.example.com";  
+        }  
+  
+        // 当页面加载完成后开始倒计时  
+        window.onload = startCountdown;  
+  
+        // 为跳转链接添加点击事件  
+        document.getElementById('skip-link').addEventListener('click', function(event) {  
+            event.preventDefault();  
+            redirect();  
+        });  
+    </script>  
+</body>  
+</html>
