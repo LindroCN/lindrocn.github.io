@@ -1,22 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Lindro | 主页</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">主页</a></li>
-                <li><a href="about.html">关于</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <h1>Welcome!页面尚未实装-上次更新24.7.10 12:16</h1>
-        <p>您正在访问的页面仍属于Lindro.xyz</p>
-    </main>
-</body>
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>Lindro|Muisc</title>  
+    <link rel="stylesheet" href="styles.css">  
+</head>  
+<body>  
+    <div class="player">  
+        <audio id="audioPlayer" src="When Nothing Remains.mp3" type="audio/mp3" controls></audio>  
+        <button onclick="playAudio()">播放</button>  
+        <button onclick="pauseAudio()">暂停</button>  
+        <input type="range" id="volumeControl" min="0" max="1" step="0.01" value="1" oninput="setVolume(this.value)">  
+        <span>音量: <span id="volumeDisplay">最大</span></span>  
+    </div>  
+  
+    <script src="script.js"></script>  
+</body>  
 </html>
