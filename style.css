@@ -54,8 +54,8 @@ main {
  
   
 nav {  
-    background-color: #555; /* 与nav ul的背景色相同，现在nav是整个导航栏的背景 */  
-    padding: 10px 0; /* 为导航栏内容添加一些垂直内边距 */  
+    background-color: #555;  
+    padding: 10px 0;
 }  
   
 nav ul {  
@@ -63,5 +63,4 @@ nav ul {
     padding: 0;  
     margin: 0;  
     display: flex;  
-    justify-content: center; /* 保持居中 */  
-}
+    justify-content: center;
