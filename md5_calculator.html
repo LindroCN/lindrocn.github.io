@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" id="theme">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lindro | MD5 Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">首页</a></li>
+                <li><a href="#">正在施工的页面</a></li>
+                <li><a href="#">正在施工的页面</a></li>
+            </ul>
+        </nav>
+        <div class="auth-buttons">
+            <label for="theme-toggle" class="theme-toggle">
+                <input type="checkbox" id="theme-toggle" onclick="toggleTheme()" />
+                <span class="slider round"></span>
+            </label>
+            <button type="button" class="auth-btn login-btn">登录</button>
+            <button type="button" class="auth-btn register-btn">注册</button>
+        </div>
+    </header>
+    <main>
+        <h1>MD5 计算</h1>
+        
+        <section class="md5-calculator">
+            <h2>MD5 计算</h2>
+            <input type="file" id="fileInput" />
+            <button type="button" onclick="calculateMD5()">计算MD5</button>
+            <p id="md5Result"></p>
+        </section>
+    </main>
+    <footer>
+        <nav>
+            <ul>
+                <li><a href="https://lindro.xyz">访问Lindro主站点</a></li>
+                <li><a href="https://github.lindro.xyz/md5.html">进行MD5校验</a></li>
+                <li><a href="#">正在施工的功能</a></li>
+                <li><a href="#">正在施工的功能</a></li>
+                <li><a href="#">正在施工的功能</a></li>
+            </ul>
+        </nav>
+    </footer>
+    <script src="spark-md5.min.js"></script>
+    <script src="script.js"></script>
+    <script src="script-md5.js"></script>
+</body>
+</html>
