@@ -6,11 +6,11 @@
 
 ### 1.报告问题
 
-* 如果您发现了一个错误或问题，请在 [issues] (https://github.com/lindro.github.io/issues) 页面提交一个问题报告。
+* 如果您发现了一个错误或问题，请在 [issues](https://github.com/lindro.github.io/issues) 页面提交一个问题报告。
 * 请提供尽可能多的详细信息，包括复现步骤、错误信息和截图（如果适用）。
 
 ### 2.提出功能请求
-* 如果您有新的功能建议或改进意见，请在 [issues] 页面提交功能请求。
+* 如果您有新的功能建议或改进意见，请在 [issues](https://github.com/lindro.github.io/issues) 页面提交功能请求。
 * 描述您希望添加的功能以及它如何改进项目。
 
 ### 3.提交代码
