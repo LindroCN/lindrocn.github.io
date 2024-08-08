@@ -4,7 +4,7 @@ body {
     padding: 0;
     background-color: #fff;
     color: #333;
-    transition: background-color 0.3s, color 0.3s;
+    transition: background-color 0.0s, color 0.0s; /* */    /* */    /*受技术能力影响,我们目前只能停止切换主题后的渐变效果以到达更好的效果,如果让你感到困扰并且您认为您能帮助我们,请您在README.md中找到我们的联系方式,与我们取得联系*/
 }
 
 header {
@@ -33,7 +33,7 @@ nav a {
     text-decoration: none;
     color: #333;
     padding: 0.5rem 1rem;
-    transition: background-color 0.3s;
+    transition: background-color 0.0s;  /*此处仍然受技术能力影响*/
 }
 
 nav a:hover {
@@ -54,7 +54,7 @@ nav a:hover {
     font-size: 1.5rem;
     padding: 0.5rem 1rem;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.0s;  /* */
 }
 
 #theme-button:hover {
@@ -108,7 +108,7 @@ main {
 .section a {
     text-decoration: none;
     color: #007BFF;
-    transition: color 0.3s;
+    transition: color 0.0s;  /* */
 }
 
 .section a:hover {
@@ -176,7 +176,7 @@ body.dark-theme #theme-button:hover {
     cursor: pointer;
     border-radius: 50px; /* Makes the button pill-shaped */
     margin-left: 0.5rem;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.0s ease;   /* */
 }
 
 .auth-btn:hover {
@@ -204,7 +204,7 @@ button {
     padding: 0.5rem 1rem;
     cursor: pointer;
     border-radius: 50px;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.0s ease;  /* */
 }
 
 button:hover {

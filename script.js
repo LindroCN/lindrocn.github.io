@@ -1,32 +1,36 @@
-function toggleTheme() {  
-    const body = document.body;  
-    const currentTheme = body.classList.contains('dark-theme') ? 'dark' : 'light';  
-    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';  
-  
-    body.classList.remove('dark-theme', 'light-theme');  
-    body.classList.add(`${newTheme}-theme`);  
-  
-    // 使用localStorage来存储新的主题设置  
-    localStorage.setItem('theme', newTheme);  
-}  
-  
-function getTheme() {  
-    // 尝试从localStorage获取主题设置  
-    const theme = localStorage.getItem('theme');  
-    return theme || 'light'; // 如果没有设置，则返回'light'作为默认主题  
-}  
-  
-document.addEventListener('DOMContentLoaded', function() {  
-    const theme = getTheme();  
-    document.body.classList.remove('dark-theme', 'light-theme'); // 先移除所有主题类  
-    document.body.classList.add(`${theme}-theme`); // 然后添加当前主题类  
-});  
-  
-// 假设你有一个按钮来切换主题  
-document.getElementById('toggle-theme-button').addEventListener('click', toggleTheme);  
-  
-// 如果你想要在页面加载时检查主题，并在控制台中打印它（仅作为演示）  
-document.addEventListener('DOMContentLoaded', function() {  
-    const currentTheme = getTheme();  
-    console.log(`当前主题: ${currentTheme}-theme`);  
+function toggleTheme() {
+    const body = document.body;
+    const themeButton = document.getElementById('theme-button');
+    const currentTheme = body.classList.contains('dark-theme') ? 'dark' : 'light';
+    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+
+    // 切换主题
+    body.classList.toggle('dark-theme', newTheme === 'dark');
+    body.classList.toggle('light-theme', newTheme === 'light');
+
+    // 存储新主题到localStorage
+    localStorage.setItem('theme', newTheme);
+
+    // 更新按钮的文本
+    themeButton.textContent = newTheme === 'dark' ? '🌙' : '☀️';
+}
+
+function getTheme() {
+    // 从localStorage获取主题，默认为'light'
+    return localStorage.getItem('theme') || 'light';
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    // 页面加载完成后，根据localStorage中的主题设置或默认设置应用主题
+    const theme = getTheme();
+    document.body.classList.add(`${theme}-theme`);
+
+    // 设置按钮的初始文本
+    const themeButton = document.getElementById('theme-button');
+    themeButton.textContent = theme === 'dark' ? '🌙' : '☀️';
+
+    console.log(`当前主题: ${theme}-theme`);
 });
+
+// 绑定主题切换按钮的点击事件
+document.getElementById('toggle-theme-button').addEventListener('click', toggleTheme);
